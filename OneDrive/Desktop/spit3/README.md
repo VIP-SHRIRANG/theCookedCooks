@@ -216,7 +216,7 @@ ChainGuard is designed for production environments with:
 - **Compliance Ready**: Audit trails and reporting
 - **Integration Friendly**: APIs for existing systems
 
----
+-----
 
 **Built for the future of DeFi security** 🛡️
 

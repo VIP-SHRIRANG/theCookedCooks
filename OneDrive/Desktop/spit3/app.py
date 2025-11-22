@@ -30,8 +30,18 @@ st.set_page_config(
 )
 
 # Configuration
-ALCHEMY_WSS_URL = "wss://polygon-mainnet.g.alchemy.com/v2/X7rMBFUvYXKpnm9Or6iEfUsing"
-ALCHEMY_HTTP_URL = "https://polygon-mainnet.g.alchemy.com/v2/X7rMBFUvYXKpnm9Or6iEfUsing"
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
+ALCHEMY_API_KEY = os.getenv('ALCHEMY_API_KEY')
+if not ALCHEMY_API_KEY:
+    raise ValueError("ALCHEMY_API_KEY environment variable is required")
+
+ALCHEMY_WSS_URL = f"wss://polygon-mainnet.g.alchemy.com/v2/{ALCHEMY_API_KEY}"
+ALCHEMY_HTTP_URL = f"https://polygon-mainnet.g.alchemy.com/v2/{ALCHEMY_API_KEY}"
 FRAUD_THRESHOLD = 0.5
 HIGH_RISK_THRESHOLD = 0.8
 

@@ -160,7 +160,15 @@ def test_system():
         print("🧪 Testing blockchain connection...")
         from web3 import Web3
         
-        ALCHEMY_URL = "wss://polygon-mainnet.g.alchemy.com/v2/X7rMBFUvYXKpnm9Or6iEfUsing"
+        import os
+        from dotenv import load_dotenv
+        load_dotenv()
+        
+        ALCHEMY_API_KEY = os.getenv('ALCHEMY_API_KEY')
+        if not ALCHEMY_API_KEY:
+            raise ValueError("ALCHEMY_API_KEY environment variable is required")
+            
+        ALCHEMY_URL = f"wss://polygon-mainnet.g.alchemy.com/v2/{ALCHEMY_API_KEY}"
         w3 = Web3(Web3.LegacyWebSocketProvider(ALCHEMY_URL))
         
         if w3.is_connected():
