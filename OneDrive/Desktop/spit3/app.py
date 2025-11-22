@@ -38,7 +38,8 @@ load_dotenv()
 
 ALCHEMY_API_KEY = os.getenv('ALCHEMY_API_KEY')
 if not ALCHEMY_API_KEY:
-    raise ValueError("ALCHEMY_API_KEY environment variable is required")
+    st.error("⚠️ ALCHEMY_API_KEY environment variable is required. Please set it in your deployment environment.")
+    st.stop()
 
 ALCHEMY_WSS_URL = f"wss://polygon-mainnet.g.alchemy.com/v2/{ALCHEMY_API_KEY}"
 ALCHEMY_HTTP_URL = f"https://polygon-mainnet.g.alchemy.com/v2/{ALCHEMY_API_KEY}"
