@@ -195,7 +195,7 @@ def main():
         return
     
     while True:
-        choice = show_menu()
+        choice = "1"
         
         if choice == "1":
             # Launch web dashboard
