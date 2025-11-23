@@ -1,0 +1,241 @@
+# ChainGuard .gitignore
+# Keep only essential system files for GitHub
+
+# =============================================================================
+# PYTHON FILES TO IGNORE
+# =============================================================================
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =============================================================================
+# MACHINE LEARNING MODELS & DATA FILES TO IGNORE
+# =============================================================================
+
+# Large CSV datasets (keep only small test files)
+first_order_df.csv
+second_order_df.csv
+large_test.csv
+edge_case_test.csv
+problematic_test.csv
+frontend_error_test.csv
+frontend_exact_test.csv
+frontend_final_test.csv
+sample_transactions.csv
+test_transactions.csv
+test_catboost.csv
+test_production_ensemble.csv
+test_suspicious_alerts.csv
+
+# Machine Learning model files (too large for GitHub)
+*.pkl
+*.joblib
+*.model
+*.h5
+*.pb
+
+# Model performance images
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# CatBoost specific files
+catboost_info/
+
+# =============================================================================
+# DATABASE FILES TO IGNORE
+# =============================================================================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================================================================
+# DEVELOPMENT & TEST FILES TO IGNORE
+# =============================================================================
+
+# Test files (keep only essential ones)
+test_*.py
+debug_*.py
+demo_*.py
+
+# Development scripts
+retrain_*.py
+optimized_*.py
+full_dataset_*.py
+simple_model_evaluation.py
+run_full_retrain.py
+start_retrain.py
+
+# Legacy/alternative implementations
+chainguard_original.py
+*_original.py
+*_old.py
+*_backup.py
+*_test.py
+
+# Multiple launcher variations (keep only main ones)
+launch_*.py
+start_chainguard_*.py
+start_system.py
+quick_start.py
+deploy_production.py
+
+# Alternative API servers (keep only main one)
+streamlined_api_server.py
+production_ensemble_api.py
+start_chainguard_api_only.py
+start_chainguard_enhanced.py
+start_chainguard_production.py
+start_chainguard_simple.py
+start_chainguard_updated.py
+start_chainguard_with_csv.py
+advanced_ensemble_fraud_detector.py
+
+# =============================================================================
+# DOCUMENTATION TO IGNORE (keep only essential)
+# =============================================================================
+
+# Detailed analysis reports (too verbose for GitHub)
+COMPLETE_MODEL_ANALYSIS_REPORT.md
+ML_MODEL_PERFORMANCE_REPORT.md
+FRAUD_DETECTION_ANALYSIS.md
+FRAUD_DETECTION_METHODOLOGY.md
+ENHANCED_FEATURES_SUMMARY.md
+ENHANCED_FEATURES.md
+REAL_DATA_RESULTS.md
+OPTIMIZED_SYSTEM_SUMMARY.md
+FINAL_SYSTEM_OVERVIEW.md
+FINAL_SYSTEM_SUMMARY.md
+FIRST_ORDER_CSV_INTEGRATION.md
+CSV_ANALYSIS_GUIDE.md
+DEPLOYMENT_GUIDE.md
+PROJECT_STRUCTURE.md
+START_COMMANDS.md
+FRONTEND_ERROR_FIX.md
+RISK_THRESHOLD_IMPLEMENTATION.md
+
+# =============================================================================
+# SYSTEM & IDE FILES TO IGNORE
+# =============================================================================
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows files
+*.bat
+*.ps1
+*.sh
+
+# =============================================================================
+# NODE.JS FILES (Frontend will have its own .gitignore)
+# =============================================================================
+
+# Node modules are handled by chainguard-frontend/.gitignore
+# No need to duplicate here
+
+# =============================================================================
+# LOGS & TEMPORARY FILES TO IGNORE
+# =============================================================================
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =============================================================================
+# KEEP THESE ESSENTIAL FILES (explicitly not ignored)
+# =============================================================================
+
+# Core system files (these will be included)
+# !api_server.py
+# !backend.py
+# !requirements.txt
+# !README.md
+# !chainguard-frontend/
+# !templates/
+
+# Small test CSV files (under 1MB)
+!test_tiny_10.csv
+!test_small_50.csv
+!test_medium_100.csv
+!test_large_500.csv
+!test_xl_1000.csv
+
+# Essential documentation
+!README.md
+!CHAINGUARD_SYSTEM_DOCUMENTATION.md
+
+# Essential scripts
+!generate_test_csvs.py

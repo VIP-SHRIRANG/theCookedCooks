@@ -1,0 +1,21 @@
+ChainGuard - Real-Time DeFi Fraud Detection System
+
+ChainGuard is a production-ready blockchain fraud detection system that monitors Polygon Mainnet transactions in real-time using advanced machine learning. The system combines a Python Flask API backend with a professional React dashboard to provide instant fraud analysis and risk scoring.
+
+Key Features:
+• Real-time blockchain monitoring via WebSocket connection to Polygon Mainnet
+• Advanced ML pipeline using CatBoost classifier with 94% ROC-AUC performance
+• Professional React dashboard with live charts, threat mapping, and node analysis
+• Risk scoring system (0-100) with configurable thresholds: Approved (<65%), Suspicious (65-79%), Blocked (≥80%)
+• Batch CSV analysis for processing large transaction datasets
+• SQLite database integration for transaction history and analytics
+• Node analysis for identifying fraud patterns and suspicious wallet clusters
+
+Technical Architecture:
+• Backend: Python Flask API with Web3.py for blockchain connectivity
+• Frontend: React.js with Material-UI components and Recharts for visualization
+• ML Engine: CatBoost classifier with 15 engineered features including behavioral patterns, temporal analysis, and fraud indicators
+• Database: SQLite for persistent storage and analytics
+• Real-time Processing: Sub-second inference on live transactions with WebSocket streaming
+
+The system is designed for enterprise deployment with comprehensive documentation, multiple launcher options, model retraining capabilities, and production-ready error handling. ChainGuard provides DeFi platforms with the tools needed to detect and prevent fraudulent transactions before they impact users.
